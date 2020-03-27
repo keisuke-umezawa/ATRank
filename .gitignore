@@ -5,4 +5,5 @@ __pycache__
 save_path
 raw_data
 .python-version
+atrank/graph*
 
