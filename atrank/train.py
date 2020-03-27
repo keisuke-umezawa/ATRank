@@ -119,7 +119,9 @@ def train_model(train_set, test_set, model, optimizer, criteria, config, device)
                 )
                 logits, norm = model(**kwargs)
                 probs_neg = torch.sigmoid(logits)
-                cum_loss += criteria(probs_neg, torch.zeros_like(probs_neg)).item() * 0.5
+                cum_loss += (
+                    criteria(probs_neg, torch.zeros_like(probs_neg)).item() * 0.5
+                )
 
                 cum_auc += np.mean((probs_pos > probs_neg).detach().cpu().numpy())
 
