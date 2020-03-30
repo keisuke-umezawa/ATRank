@@ -53,6 +53,7 @@ python train.py
 ```
 
 ## Results
+lr = 0.01, needs more epoch. Or, lr scheduler is needed.
 
 ```
     trn_loss   tst_auc  tst_loss                       
